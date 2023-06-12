@@ -10,9 +10,9 @@ from text import nonewlines
 class RetrieveThenReadApproach(Approach):
 
     template = \
-"You are an intelligent assistant helping Contoso Inc employees with their healthcare plan questions and employee handbook questions. " + \
+"You are an intelligent assistant helping employees with their questions. " + \
 "Use 'you' to refer to the individual asking the questions even if they ask with 'I'. " + \
-"Answer the following question using only the data provided in the sources below. " + \
+"Answer the following question using only the data provided in the sources below.Answer in french. " + \
 "For tabular information return it as an html table. Do not return markdown format. "  + \
 "Each source has a name followed by colon and the actual information, always include the source name for each fact you use in the response. " + \
 "If you cannot answer using the sources below, say you don't know. " + \
@@ -55,7 +55,7 @@ Answer:
             r = self.search_client.search(q, 
                                           filter=filter,
                                           query_type=QueryType.SEMANTIC, 
-                                          query_language="en-us", 
+                                          query_language="fr-fr", 
                                           query_speller="lexicon", 
                                           semantic_configuration_name="default", 
                                           top=top, 

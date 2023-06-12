@@ -29,7 +29,7 @@ class ReadDecomposeAsk(Approach):
             r = self.search_client.search(q,
                                           filter=filter,
                                           query_type=QueryType.SEMANTIC, 
-                                          query_language="en-us", 
+                                          query_language="fr-fr", 
                                           query_speller="lexicon", 
                                           semantic_configuration_name="default", 
                                           top = top,
@@ -47,7 +47,7 @@ class ReadDecomposeAsk(Approach):
                                       top = 1,
                                       include_total_count=True,
                                       query_type=QueryType.SEMANTIC, 
-                                      query_language="en-us", 
+                                      query_language="fr-fr", 
                                       query_speller="lexicon", 
                                       semantic_configuration_name="default",
                                       query_answer="extractive|count-1",
@@ -207,4 +207,4 @@ SUFFIX = """\nQuestion: {input}
 PREFIX = "Answer questions as shown in the following examples, by splitting the question into individual search or lookup actions to find facts until you can answer the question. " \
 "Observations are prefixed by their source name in angled brackets, source names MUST be included with the actions in the answers." \
 "All questions must be answered from the results from search or look up actions, only facts resulting from those can be used in an answer. "
-"Answer questions as truthfully as possible, and ONLY answer the questions using the information from observations, do not speculate or your own knowledge."
+"Answer questions as truthfully as possible,in french and ONLY answer the questions using the information from observations, do not speculate or your own knowledge."
